@@ -1,74 +1,109 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Les Gâteaux de Martin</title>
-    <style>
-        body {
-            background-color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            padding: 20px;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 0.2em;
-        }
-        p.slogan {
-            font-size: 1.2em;
-            color: #555;
-        }
-        .presentation {
-            padding: 20px;
-            font-size: 1.1em;
-        }
-        .gallery {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
-            padding: 20px;
-        }
-        .gallery-item {
-            max-width: 300px;
-        }
-        .gallery-item img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        .caption {
-            margin-top: 10px;
-            font-weight: bold;
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Les Gâteaux de Martin</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    background: #fff;
+  }
+  header {
+    text-align: center;
+    padding: 50px 20px 10px;
+  }
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    margin: 0;
+  }
+  header p {
+    font-size: 1.1em;
+    color: #777;
+  }
+  .slider {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    margin: 30px auto;
+    max-width: 1200px;
+  }
+  .slides {
+    display: flex;
+    width: 300%;
+    animation: slide 15s infinite;
+  }
+  .slides img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .caption {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background: rgba(255,255,255,0.8);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
+    color: #333;
+  }
+  @keyframes slide {
+    0% {transform: translateX(0);}
+    33% {transform: translateX(-100%);}
+    66% {transform: translateX(-200%);}
+    100% {transform: translateX(0);}
+  }
+  .presentation {
+    max-width: 800px;
+    margin: 40px auto;
+    font-size: 1.1em;
+    text-align: center;
+    line-height: 1.6;
+  }
+  footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: #777;
+    font-size: 0.9em;
+  }
+</style>
 </head>
 <body>
-    <header>
-        <h1>Les Gâteaux de Martin</h1>
-        <p class="slogan">Préparationnaire à temps plein et pâtissier à temps partiel</p>
-    </header>
-    <section class="presentation">
-        Je suis pâtissier passionné depuis 3 ans et je propose mes créations à la vente sur commande.
-    </section>
-    <section class="gallery">
-        <div class="gallery-item">
-            <img src="images/charlotte.jpg" alt="Charlotte aux fraises">
-            <div class="caption">Charlotte aux fraises</div>
-        </div>
-        <div class="gallery-item">
-            <img src="images/tarte.jpg" alt="Tarte aux fraises">
-            <div class="caption">Tarte aux fraises</div>
-        </div>
-        <div class="gallery-item">
-            <img src="images/fraisier.jpg" alt="Fraisier">
-            <div class="caption">Fraisier</div>
-        </div>
-    </section>
+
+<header>
+  <h1>Les Gâteaux de Martin</h1>
+  <p>Préparationnaire à temps plein et pâtissier à temps partiel</p>
+</header>
+
+<div class="slider">
+  <div class="slides">
+    <div style="position:relative;">
+      <img src="images/charlotte.jpg" alt="Charlotte aux fraises">
+      <div class="caption">Charlotte aux fraises</div>
+    </div>
+    <div style="position:relative;">
+      <img src="images/tarte.jpg" alt="Tarte aux fraises">
+      <div class="caption">Tarte aux fraises</div>
+    </div>
+    <div style="position:relative;">
+      <img src="images/fraisier.jpg" alt="Fraisier">
+      <div class="caption">Fraisier</div>
+    </div>
+  </div>
+</div>
+
+<section class="presentation">
+  Je suis pâtissier passionné depuis 3 ans et je propose mes créations à la vente sur commande. Découvrez ici mes réalisations, faites maison avec soin et gourmandise.
+</section>
+
+<footer>
+  &copy; 2025 Les Gâteaux de Martin — Tous droits réservés.
+</footer>
+
 </body>
 </html>
